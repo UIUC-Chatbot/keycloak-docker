@@ -1,0 +1,26 @@
+{
+  "name": "uiucchat-keycloak-docker",
+  "version": "1.0.0",
+  "description": "This repository was adapted from [Keycloak Docker](https://github.com/leonardochappuis/keycloak-docker). The Keycloak instance uses the [keywind](https://github.com/lukin/keywind) keycloak theme with UIUC brand [colors](https://brand.illinois.edu/visual-identity/color)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@keycloak/keycloak-admin-ui": "^26.1.0",
+    "css-loader": "^7.1.2",
+    "postcss-loader": "^8.1.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "style-loader": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0"
+  }
+}

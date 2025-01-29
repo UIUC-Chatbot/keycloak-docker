@@ -1,0 +1,57 @@
+{
+    "realm": "test",
+    "enabled": true,
+    "registrationAllowed": true,
+    "loginWithEmailAllowed": true,
+    "duplicateEmailsAllowed": false,
+    "resetPasswordAllowed": true,
+    "editUsernameAllowed": false,
+    "bruteForceProtected": true,
+    "accessTokenLifespan": 300,
+    "ssoSessionIdleTimeout": 1800,
+    "ssoSessionMaxLifespan": 36000,
+    "defaultSignatureAlgorithm": "RS256",
+    "revokeRefreshToken": false,
+    "refreshTokenMaxReuse": 0,
+    "accessTokenLifespanForImplicitFlow": 900,
+    "internationalizationEnabled": true,
+    "supportedLocales": ["en"],
+    "defaultLocale": "en",
+    "eventsEnabled": true,
+    "eventsListeners": ["jboss-logging"],
+    "enabledEventTypes": ["LOGIN", "LOGOUT", "CODE_TO_TOKEN", "REGISTER", "REFRESH_TOKEN"],
+    "adminEventsEnabled": true,
+    "adminEventsDetailsEnabled": true,
+    "loginTheme": "keywind",
+    "accountTheme": "keywind",
+    "users": [
+        {
+            "username": "testuser",
+            "enabled": true,
+            "email": "testuser@example.com",
+            "firstName": "Test",
+            "lastName": "User",
+            "credentials": [
+                {
+                    "type": "password",
+                    "value": "testpass",
+                    "temporary": false
+                }
+            ],
+            "requiredActions": [],
+            "realmRoles": ["default-roles-test"]
+        }
+    ],
+    "clients": [
+        {
+            "clientId": "test-client",
+            "enabled": true,
+            "publicClient": true,
+            "redirectUris": ["http://localhost:3000/*"],
+            "webOrigins": ["http://localhost:3000"],
+            "directAccessGrantsEnabled": true,
+            "standardFlowEnabled": true,
+            "protocol": "openid-connect"
+        }
+    ]
+}
