@@ -1,10 +1,10 @@
 <#import "/assets/providers/providers.ftl" as providerIcons>
 
 <#macro kw providers=[]>
-  <div class="pt-4 separate text-secondary-600 text-sm">
+  <div class="py-2 separate text-secondary-600 text-sm">
     ${msg("identity-provider-login-label")}
   </div>
-  <div class="gap-4 grid grid-cols-3">
+  <div class="gap-4 grid grid-cols-2">
     <#list providers as provider>
       <#switch provider.alias>
         <#case "apple">
@@ -63,7 +63,7 @@
       </#switch>
 
       <a
-        class="${colorClass} border border-secondary-200 flex justify-center py-2 rounded-lg hover:border-transparent"
+        class="${colorClass} provider-button border border-secondary-200 flex items-center justify-center py-2 px-4 rounded-lg hover:border-transparent"
         data-provider="${provider.alias}"
         href="${provider.loginUrl}"
         type="button"
@@ -72,6 +72,7 @@
           <div class="h-6 w-6">
             <@providerIcons[provider.alias] />
           </div>
+          <span class="ml-4">${provider.displayName!}</span>
         <#else>
           ${provider.displayName!}
         </#if>

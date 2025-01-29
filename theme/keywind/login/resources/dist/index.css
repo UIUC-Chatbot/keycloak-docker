@@ -20,6 +20,12 @@
     --uiuc-industrial: #1d58a7;
 }
 
+.provider-button {
+    display: flex;
+    align-items: center;
+    gap: .75rem;  /* This is equivalent to gap-4 in Tailwind */
+  }
+
 @keyframes meshGradient {
     0% {
         background-position: 0% 50%;
@@ -138,6 +144,10 @@ button,
     -webkit-appearance: button;
     background-color: transparent;
     background-image: none
+}
+
+.h-identity-provider {
+    height: 100px;
 }
 
 :-moz-focusring {

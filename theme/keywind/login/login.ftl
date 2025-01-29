@@ -81,7 +81,9 @@
     </#if>
   <#elseif section="socialProviders">
     <#if realm.password && social.providers??>
+    <div class="w-full">
       <@identityProvider.kw providers=social.providers />
+      </div>
     </#if>
   </#if>
 </@layout.registrationLayout>
